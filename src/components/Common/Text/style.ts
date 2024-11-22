@@ -15,7 +15,6 @@ export const HeadingSection = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
-    text-align: left;
 
     .hr{
         border: 1px solid #a48ea6;
@@ -36,10 +35,6 @@ export const SubHeading = styled.h2`
     padding: 15px 0px 20px 0px ;
     line-height: 70px;
     text-align: center;
-
-    @media (max-width: 768px) {
-        font-size: 40px;
-    }
 `;
 
 export const Description = styled.p`
@@ -51,7 +46,27 @@ export const Description = styled.p`
     margin-left: 250px;
     margin-right: 250px;
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 576px) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    @media (min-width: 769px) and (max-width: 992px) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    @media (min-width: 1201px) and (max-width: 1450px) {
         margin-left: 0px;
         margin-right: 0px;
     }

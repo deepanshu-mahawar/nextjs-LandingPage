@@ -6,6 +6,16 @@ export const CardSection = styled.div`
     height: 500px;
     border-radius: 35px;
     overflow: hidden;  
+
+    @media screen and (max-width: 576px) {
+        position: relative;
+        width: 500px;
+    }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+        position: relative;
+        width: 550px;
+    }
 `;
 
 export const ImageBox = styled.div`

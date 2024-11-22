@@ -3,12 +3,15 @@ import styled from "styled-components";
 export const HeaderSection = styled.header`
     height: 100px;
     width: 100vw;
-    position: absolute;
+    position: fixed;
+    /* top: 0; */
+    z-index: 2;
     padding: 0px 180px;
     background: ${({theme}) => theme.colors.background1};
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 
     .logolink{
         height: 100px;
@@ -25,15 +28,29 @@ export const HeaderSection = styled.header`
         font-size: 30px;
     }
 
-
-
-    @media (max-width: 768px) {
-        display: flex;
-        padding: 0 40px;
+    @media (min-width: 1450px) and (max-width: 1750px) {
+        padding: 0px 40px;
     }
 
-    @media (min-width: 1600px) and (max-width: 1800px) {
-        padding: 0px 80px;
+    @media screen and (max-width: 576px) {
+        padding: 0px 20px;
+    }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+        padding: 0px 20px;
+    }
+
+    @media (min-width: 769px) and (max-width: 992px) {
+        padding: 0px 40px;
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        padding: 0px 40px;
+        width: 100vw;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1450px) {
+        padding: 0px 40px;
     }
 `;
 
@@ -44,13 +61,10 @@ export const ButtonSection = styled.div`
     align-items: center;
     gap: 25px;
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         display: none;
     }
-
-
-
-`
+`;
 
 // export const Button = styled.button`
 //     color: ${({theme}) => theme.colors.background2};
@@ -72,15 +86,16 @@ export const ButtonSection = styled.div`
 
 
 export const Button = styled.button<{$active?:boolean}>`
-    /* color: ${({theme}) => theme.colors.background2};
-    border: none;
-    font-size: 16px; */
-
     background: ${({$active,theme}) => $active ? theme.colors.primary : "transparent"};
     color: ${({$active,theme}) => $active ? theme.colors.background1 : theme.colors.background2};
     padding: ${({$active,theme}) => $active ? theme.padding.btnPadding : null};
     border-radius: ${({$active,theme}) => $active ? theme.borderRadius.radius : null};
     
+    
+    /* color: ${({theme}) => theme.colors.background2};
+    border: none;
+    font-size: 16px; */
+
     /* &:hover, &.active{
         background-color: ${({theme}) => theme.colors.primary};
         color: ${({theme}) => theme.colors.background1};
@@ -97,9 +112,22 @@ export const Button = styled.button<{$active?:boolean}>`
 export const MobileIcons = styled.div`
     display: none;
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         display: flex;
     }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+        display: flex;
+    }
+
+    @media (min-width: 769px) and (max-width: 992px) {
+        display: flex;
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        display: flex;
+    }
+
 
 `;
 
@@ -108,6 +136,7 @@ export const MobileMenu = styled.div`
     top: 102px;
     left: 0px;
     width: 100%;
+    height: 100vh;
     background-color: white;
     padding: 20px;
     text-align: center;
@@ -140,6 +169,27 @@ export const MobileMenu = styled.div`
             padding: 15px 0px;
             border-radius: 50px;
         }
+
+        @media (min-width: 577px) and (max-width: 768px) {
+            display: none;
+        }
+
+        @media (min-width: 769px) and (max-width: 992px) {
+            display: none;
+        }
+
+        @media (min-width: 993px) and (max-width: 1200px) {
+        display: none;
+        }
     }
+
+    @media (min-width: 1200px) and (max-width: 1450px) {
+        display: none;
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        display: block;
+    }
+
 `;
 

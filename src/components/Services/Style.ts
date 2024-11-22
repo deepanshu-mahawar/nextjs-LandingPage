@@ -5,14 +5,30 @@ export const PortfolioSection = styled.main`
     flex-direction: column;
     padding: 100px 180px 80px 180px;
 
-    @media (max-width: 768px) {
-        padding: 80px 40px 80px 40px;
+    @media (min-width: 1201px) and (max-width: 1450px) {
+        padding: 50px 40px;
     }
 
-
-    @media (min-width: 1500px) and (max-width: 1750px) {
-        padding: 80px 80px 80px 80px;
+    @media screen and (max-width: 576px) {
+        padding: 50px 20px 0px 20px;
     }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+        padding: 50px 20px;
+    }
+
+    @media (min-width: 769px) and (max-width: 992px) {
+        padding: 50px 40px;
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        padding: 50px 40px;
+    }
+
+    @media (min-width: 1450px) and (max-width: 1750px) {
+        padding: 50px 50px 0px 50px;
+    }
+    
 `;
 
 export const GridLayout = styled.div`
@@ -21,10 +37,16 @@ export const GridLayout = styled.div`
     gap: 30px;
     grid-template-columns: repeat(3, 1fr);
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         display: flex;
         flex-direction: column;
-        padding: 20px 50px;
+    }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 `;
 

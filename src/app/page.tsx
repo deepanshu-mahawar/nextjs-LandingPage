@@ -24,13 +24,13 @@ export default function Home() {
     <html>
       <body className={poppins.className}>
         <Header/>
-        {/* <Banner/>  */}
-        {/* <Services/> */}
-        {/* <AboutUs/> */}
-        {/* <Portfolio/> */}
-        {/* <GetInTouch/> */}
-        {/* <Career/> */}
-        {/* <Footer/>  */}
+        <Banner/> 
+        <Services/>
+        <AboutUs/>
+        <Portfolio/>
+        <GetInTouch/>
+        <Career/>
+        <Footer/> 
       </body>
     </html>
   );

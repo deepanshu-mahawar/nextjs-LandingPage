@@ -7,16 +7,32 @@ export const Navigations = styled.nav`
     background: transparent;
     font-weight: 400;
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         display: none;
     }
 
+    @media (min-width: 577px) and (max-width: 769px) {
+        display: none;
+    }
+
+    @media (min-width: 769px) and (max-width: 992px) {
+        display: none;
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        display: none;
+    }
 `;
 
 export const NavMenus = styled.a<{$active?:boolean}>`
+    margin: 0px 15px;
+    background: ${({$active,theme}) => $active ? theme.colors.background2 : "transparent"};
+    color: ${({$active,theme}) => $active ? theme.colors.background1 : theme.colors.background2};
+    padding: ${({$active,theme}) => $active ? theme.padding.btnPadding : null};
+    border-radius: ${({$active,theme}) => $active ? theme.borderRadius.radius : null};
+    
     /* margin: 0 20px; */
     /* text-decoration: none;
-    
 
     &:hover, &.active{
         background-color: black;
@@ -27,11 +43,5 @@ export const NavMenus = styled.a<{$active?:boolean}>`
         text-transform: uppercase;
     } */
 
-    margin: 0px 15px;
-    /* margin: ${({$active,theme}) => $active ? theme.margin.linkMargin : null}; */
-    background: ${({$active,theme}) => $active ? theme.colors.background2 : "transparent"};
-    color: ${({$active,theme}) => $active ? theme.colors.background1 : theme.colors.background2};
-    padding: ${({$active,theme}) => $active ? theme.padding.btnPadding : null};
-    border-radius: ${({$active,theme}) => $active ? theme.borderRadius.radius : null};
 
 `;

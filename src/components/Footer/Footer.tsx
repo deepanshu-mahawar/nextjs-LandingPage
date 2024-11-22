@@ -8,11 +8,15 @@ import { FiInstagram } from "react-icons/fi"
 import { BiLogoYoutube } from "react-icons/bi"
 import { BsEnvelopeFill } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
-import { FooterSection, LogoSection, Text, ParagraphSection, Text2, IconSection, Icons, LinkSection } from "./Style"
+import { FooterSection, LogoSection, Text, ParagraphSection, Text2, IconSection, Icons, LinkSection, 
+    FooterForMobile, FollowIcons, NavLink1} from "./Style"
 import NavLinks from "../Common/NavLinks/NavLinks";
+import Link from "next/link";
+
 
 const Footer = () => {
   return (
+    <>
     <FooterSection>
         <LogoSection>
             <Image src={logo} alt="#" className="logo"></Image>
@@ -43,13 +47,7 @@ const Footer = () => {
                     <li><a href="#">Career</a></li>
                     <li><a href="#">Contact us</a></li>
                 </ul>
-            </nav> 
-
-            {/* <NavLinks
-            hoverpadding="0px 0px"
-            bgColor="black"
-            textColor="white"/> */}
-            
+            </nav>             
 
             <nav>
                 <ul className="listItems">
@@ -61,6 +59,40 @@ const Footer = () => {
             <p>Copyright &copy; 2024 Kriotek Systems, All Rights Reserved.</p>
         </LinkSection>
     </FooterSection>
+
+    <FooterForMobile>
+        <Link href="#" className="LogoLink">
+        <Image src={logo} alt="" className="img"/>
+        </Link>
+
+        <p className="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dicta adipisci minus sint, numquam quis voluptatibus dolorem quisquam earum! Asperiores.</p>
+
+        <p className="follow">Follow on</p>
+        <FollowIcons>   
+            <a href="#"><FaFacebookF className="icon"/></a>
+            <a href="#"><RiTwitterFill className="icon"/></a>
+            <a href="#"><FiInstagram className="icon"/></a>
+            <a href="#"><BsEnvelopeFill className="icon"/></a>
+            <a href="#"><BiLogoYoutube className="icon"/></a>
+            <a href="#"><FaLinkedinIn className="icon"/></a>
+        </FollowIcons>
+
+        <NavLink1>
+            <ul >
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Our services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms & condition</a></li>
+            </ul>
+        </NavLink1>  
+        
+        <p className="copyright">Copyright &copy; 2024 Kriotek Systems, All Rights Reserved.</p>
+    </FooterForMobile>
+    </>
   )
 }
 

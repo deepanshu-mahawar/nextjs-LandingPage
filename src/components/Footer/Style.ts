@@ -9,20 +9,31 @@ export const FooterSection = styled.footer`
         border-color: #262626;
     }
 
-    //Media Query for smartphones
-    @media (max-width: 768px) {
-    padding: 50px 40px;
+    @media (min-width: 1450px) and (max-width: 1750px) {
+        padding: 50px 50px;
+    }
 
-        .line{
+    @media screen and (max-width: 576px) {
+       display: none;
+    }
+
+    @media (min-width: 577px) and (max-width: 768px){
         display: none;
-        }
     }
 
-
-    @media (min-width: 1500px) and (max-width: 1750px) {
-        padding: 50px 80px;
+    @media (min-width: 769px) and (max-width: 992px){
+        width: 100%;
+        padding: 50px 40px 70px 40px;
     }
 
+    @media (min-width: 993px) and (max-width: 1200px){
+        width: 100%;
+        padding: 50px 40px 70px 40px;
+    }
+
+    @media (min-width: 1201px) and (max-width: 1450px){
+        padding: 50px 40px;
+    }
 `;
 
 export const LogoSection = styled.div`
@@ -34,26 +45,25 @@ export const LogoSection = styled.div`
         width: 18%;
     }
 
-    //Media Query for smartphones
-    @media (max-width: 768px) {
+    @media (min-width: 769px) and (max-width: 992px){
         align-items: center;
-
         .logo{
-            width: 30%;
+            width: 25%;
         }
     }
 
+    @media (min-width: 993px) and (max-width: 1200px){
+        align-items: center;
+        .logo{
+            width: 25%;
+        }
+    }
+    
 `;
 
 export const Text = styled.p`
     font-size: 25px;
     font-weight: ${({theme}) => theme.fontWeight.light};
-
-    //Media Query for smartphones
-    @media (max-width: 768px) {
-        font-size: 20px;
-    }
-
 `;
 
 export const ParagraphSection = styled.div`
@@ -61,29 +71,27 @@ export const ParagraphSection = styled.div`
     justify-content: space-between;
     padding: 40px 0px;
 
-    //Media Query for smartphones
-    @media (max-width: 768px) {
-        padding: 20px 0px 0px 0px;
+    @media (min-width: 769px) and (max-width: 992px){
+        padding: 20px 0px;
     }
 
-
-
+    @media (min-width: 993px) and (max-width: 1200px){
+        padding: 20px 0px;
+    }
+    
 `;
 
 export const Text2 = styled.p`
     line-height: ${({theme}) => theme.textLineHeight.normal};
     font-weight: 200;
 
-    //Media Query for smartphones
-    @media (max-width: 768px) {
-        height: fit-content;
-        width: fit-content;
-        margin-right: 200px;
-        font-size: 18px;
-        font-weight: 200;
+    @media (min-width: 769px) and (max-width: 992px){
+        margin-right: 250px;
     }
 
-
+    @media (min-width: 993px) and (max-width: 1200px){
+        margin-right: 250px;
+    }
 `;
 
 export const IconSection = styled.div`
@@ -91,14 +99,13 @@ export const IconSection = styled.div`
     gap: 15px;
     height: 55px;
 
-    //Media Query for smartphones
-    @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
+    @media (min-width: 769px) and (max-width: 992px){
+        height: 40px;
     }
 
-
-
+    @media (min-width: 993px) and (max-width: 1200px){
+        height: 40px;
+    }
 `;
 
 export const Icons = styled.a`
@@ -110,16 +117,21 @@ export const Icons = styled.a`
         font-size: ${({theme}) => theme.fontSize.size30};
     }
 
-    //Media Query for smartphones
-    @media (max-width: 768px) {
-    padding: 10px 10px;
-
+    @media (min-width: 769px) and (max-width: 992px){
+        padding: 8px 10px;
+        
         .icon{
-        font-size: 20px;
+            font-size: 20px;
         }
     }
 
-
+    @media (min-width: 993px) and (max-width: 1200px){
+        padding: 8px 10px;
+        
+        .icon{
+            font-size: 20px;
+        }
+    }
 `;
 
 export const LinkSection = styled.div`
@@ -139,23 +151,176 @@ export const LinkSection = styled.div`
         padding-left: 30px;
     }
 
-    //Media Query for smartphones
-    @media (max-width: 768px) {
-    flex-direction: column;
-    margin-top: 0px;
+    @media (min-width: 769px) and (max-width: 992px){
+        p{
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            display: flex;
+            margin-top: 50px;
+            justify-content: start;
+        }
 
-    .listItems{
-        flex-direction: column;
-        margin-top: 30px;
-    }
-    .vl{
-        display: none;
+        .listItems{
+            gap: 20px;
+        }
+
+        .vl{
+            padding-left: 20px;
+        }
     }
 
-    p{
-        text-align: center;
-        margin-top: 50px;
+    @media (min-width: 993px) and (max-width: 1200px){
+        p{
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            display: flex;
+            margin-top: 50px;
+            justify-content: start;
+        }
+
+        .listItems{
+            gap: 20px;
+        }
+
+        .vl{
+            padding-left: 20px;
+        }
     }
+    
+    @media (min-width: 1201px) and (max-width: 1450px){
+        margin-bottom: 20px;
+        p{
+            position: absolute;
+            margin-top: 50px;
+        }
     }
 
 `;
+
+
+export const FooterForMobile = styled.div`
+    display: none;
+
+  @media screen and (max-width: 576px) {
+       display: block;
+       background-color: black;
+       padding: 0px 20px;
+       padding-top: 40px;
+       padding-bottom: 30px;
+
+    .LogoLink{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 300px;
+    }
+
+    .para{
+        color: white;
+        padding-top: 20px;
+        font-weight: 300;
+        width: 100%;
+    }
+
+    .copyright{
+        text-align: center;
+        color: white;
+        font-weight: 300;
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .follow{
+        font-size: 25px;
+        color: white;
+        padding-top: 40px;
+    }
+  }
+
+  @media (min-width: 577px) and (max-width: 768px){
+       display: block;
+       background-color: black;
+       padding: 0px 20px;
+       padding-top: 40px;
+       padding-bottom: 30px;
+
+    .LogoLink{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 300px;
+    }
+
+    .para{
+        color: white;
+        padding-top: 20px;
+        font-weight: 300;
+        width: 100%;
+    }
+
+    .copyright{
+        text-align: center;
+        color: white;
+        font-weight: 300;
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .follow{
+        font-size: 30px;
+        color: white;
+        padding-top: 40px;
+    }
+  }
+
+    
+`;
+
+
+
+export const FollowIcons = styled.div`
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+
+    a{
+        border: 2px solid white;
+        border-radius: 50px;
+        padding: 7px;
+    }
+    .icon{
+        font-size: 15px;
+        color: white;
+    }
+
+    @media (min-width: 577px) and (max-width: 768px){
+        .icon{
+        font-size: 18px;
+        color: white;
+    }
+    }
+`;
+
+export const NavLink1 = styled.nav`
+    padding: 20px 0px;
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        color: white;
+    }
+
+    a{
+        &:hover{
+            /* border-bottom: 2px solid white; */
+            font-size: 20px;
+        }
+    }
+`;
+
+
+

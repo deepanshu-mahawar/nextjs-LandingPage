@@ -23,15 +23,30 @@ export const MainBox = styled.div`
         }
     }
 
-    @media (max-width: 768px) {
-        height: 500px;
+    @media screen and (max-width: 576px) {
+        padding: 70px 30px;
     }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+        width: 80%;
+    }
+
+    @media (min-width: 769px) and (max-width: 992px) {
+        padding: 30px 10px;
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        padding: 30px 20px;
+    }
+
+
 `;
 
 export const LogoSection = styled.div`
     border: 1px solid black;
     border-radius: 60px;
     padding: 3px;
+
 `;
 
 export const Logos = styled.div`
@@ -42,6 +57,21 @@ export const Logos = styled.div`
         font-size: 50px;
     }
 
+    @media (min-width: 769px) and (max-width: 992px) {
+        padding: 15px;
+
+        .logoImg{
+            font-size: 30px;
+        }
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        padding: 15px;
+
+        .logoImg{
+            font-size: 30px;
+        }
+    }
 `;
 
 export const Heading = styled.h1`
@@ -50,6 +80,14 @@ export const Heading = styled.h1`
     color: black;
     padding: 30px 0px 15px 0px;
     text-align: center;
+
+    @media screen and (max-width: 576px) {
+        font-size: 30px;
+    }
+
+    @media (min-width: 769px) and (max-width: 992px) {
+        font-size: 20px;
+    }
 `;
 
 export const Paragraph = styled.p`
@@ -57,4 +95,8 @@ export const Paragraph = styled.p`
     color: black;
     text-align: center;
     line-height: 30px;
+
+    @media screen and (max-width: 576px) {
+        font-size: 16px;
+    }
 `;

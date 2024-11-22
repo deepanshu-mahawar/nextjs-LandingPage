@@ -3,14 +3,32 @@ import styled from "styled-components";
 export const HeadingSection = styled.div`
     padding: 360px 0px 0px 180px;
 
-    @media (max-width: 768px) {
-        padding: 250px 40px 0px 40px;
+    @media (min-width: 1450px) and (max-width: 1750px) {
+        padding: 350px 0px 0px 50px;
     }
 
-    @media (min-width: 1500px) and (max-width: 1750px) {
-        padding: 250px 400px 0px 80px;
+    @media screen and (max-width: 576px) {
+       padding: 250px 0px 0px 20px;
+    }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+       padding: 250px 50px 0px 20px;
+    }
+
+    @media (min-width: 769px) and (max-width: 992px) {
+       padding: 250px 0px 0px 40px;
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        padding: 250px 0px 0px 40px;
+        width: 100vw;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1450px) {
+        padding: 250px 0px 0px 40px;
     }
 `;
+
 
 export const Heading = styled.h1`
     color: ${({theme}) => theme.colors.background1};
@@ -18,11 +36,15 @@ export const Heading = styled.h1`
     font-weight: ${({theme}) => theme.fontWeight.weight200};
     line-height: 120px;
 
-    @media (max-width: 768px) {
-        font-size: 70px;
-        line-height: 100px;
+    @media screen and (max-width: 576px) {
+       font-size: 55px;
+       line-height: 60px;
     }
 
+    @media (min-width: 577px) and (max-width: 768px) {
+        font-size: 65px;
+        line-height: 80px;
+    }
 `;
 
 export const Span = styled.span`
@@ -36,9 +58,9 @@ export const Paragraph = styled.p`
     line-height: ${({theme}) => theme.textLineHeight.medium};
     padding: 25px 0px;
 
-    @media (max-width: 768px) {
-        font-size: 18px;
-        padding: 15px 0px;
+    @media screen and (max-width: 576px) {
+       font-size: 18px;
+       padding: 25px 0px;
     }
 `;
 
@@ -51,8 +73,8 @@ export const Button = styled.button`
     align-items: center;
     gap: 10px;
 
-    @media (max-width: 768px) {
-        font-size: 25px;
+    @media screen and (max-width: 576px) {
+       font-size: 25px;
     }
 `;
 
